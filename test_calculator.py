@@ -2,6 +2,7 @@ import unittest
 
 from calculator import evaluate
 
+print("Running calculator tests...")
 
 class TestCalculator(unittest.TestCase):
     def test_basic_add(self):
