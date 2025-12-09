@@ -40,7 +40,7 @@ def _eval_node(node: ast.AST) -> Union[int, float]:
             except ZeroDivisionError as e:
                 raise ValueError("Division by zero") from e
         raise ValueError(f"Unsupported operator: {op_type!r}")
-
+    
     if isinstance(node, ast.UnaryOp):
         operand = _eval_node(node.operand)
         if isinstance(node.op, ast.UAdd):
