@@ -29,7 +29,7 @@ def _eval_node(node: ast.AST) -> Union[int, float]:
         if isinstance(node.value, (int, float)):
             return node.value
         raise ValueError(f"Unsupported constant: {node.value!r}")
-
+    
     if isinstance(node, ast.BinOp):
         left = _eval_node(node.left)
         right = _eval_node(node.right)
